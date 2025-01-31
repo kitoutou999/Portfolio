@@ -57,7 +57,7 @@ function init() {
     composer.addPass(effectSobel);
 
     const controls = new THREE.OrbitControls(camera, renderer.domElement);
-    controls.enabled = true; 
+    controls.enabled = false; 
 
 
     
