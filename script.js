@@ -108,39 +108,16 @@ async function handleSubmit(event) {
 
 form.addEventListener('submit', handleSubmit);
 
-function setCookie(name, value, minutes) {
-    const d = new Date();
-    d.setTime(d.getTime() + minutes * 60 * 1000);
-    const expires = "expires=" + d.toUTCString();
-    document.cookie = name + "=" + value + ";" + expires + ";path=/";
-}
-
-function getCookie(name) {
-    const nameEQ = name + "=";
-    const ca = document.cookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i].trim();
-        if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
-    }
-    return null;
-}
-
 const contactForm = document.querySelector('.contact-form');
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
-        if (getCookie('mailCooldown')) {
-            e.preventDefault();
-            alert("Please wait 1 minute before sending another message.");
-        } else {
-            setCookie('mailCooldown', 'true', 1);
-            const submitBtn = this.querySelector('.submit-btn');
-            submitBtn.disabled = true;
-            submitBtn.innerText = "Please wait...";
-
-            setTimeout(() => {
-                submitBtn.disabled = false;
-                submitBtn.innerText = "Send Message";
-            }, 60000); 
-        }
+        const submitBtn = this.querySelector('.submit-btn');
+        submitBtn.disabled = true;
+        submitBtn.innerText = "Please wait...";
+        
+        setTimeout(() => {
+            submitBtn.disabled = false;
+            submitBtn.innerText = "Send Message";
+        }, 60000); 
     });
 }
