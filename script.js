@@ -114,8 +114,7 @@ if (contactForm) {
         const submitBtn = this.querySelector('.submit-btn');
         submitBtn.disabled = true;
         submitBtn.innerText = "Please wait...";
-        status.textContent = 'To Fast';
-        
+                
         setTimeout(() => {
             submitBtn.disabled = false;
             submitBtn.innerText = "Send Message";

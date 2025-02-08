@@ -470,6 +470,7 @@ nav {
 }
 
 .submit-btn {
+    margin-top: 10px;
     background: #64ffda;
     color: #151515;
     border: none;
