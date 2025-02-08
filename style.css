@@ -6,7 +6,7 @@
 }
 
 body {
-    background: #0a0a0a;
+    background:  #0d0d0d  ;
     color: #fff;
     overflow-x: hidden;
     user-select: none;
@@ -121,6 +121,7 @@ nav {
 
 .cta-button:hover {
     background: rgba(100, 255, 218, 0.1);
+    transform: translateY(-2px);
 }
 
 @keyframes fadeInUp {
@@ -238,9 +239,264 @@ nav {
     }
 }
 
-.second {
-    background-color: #64ffda;
+.skills {
+    padding: 5rem 2rem;
+    background: transparent;
+}
+
+.skills-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 4rem;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: #64ffda;
+    margin: 0.5rem auto;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.skill-card {
+    background: #151515;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid #252525;
+}
+
+.skill-card:hover {
+    transform: translateY(-10px);
+    border-color: #64ffda;
+}
+
+.skill-card i {
+    font-size: 3.5rem;
+    margin-bottom: 1.5rem;
+    color: #00ff88;
+}
+
+.skill-card h3 {
+    color: #fff;
+    margin-bottom: 1rem;
+    font-size: 1.5rem;
+}
+
+.skill-card p {
+    color: #aaa;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+  
+
+
+
+
+.projects {
+    padding: 5rem 2rem;
+}
+
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.project-card {
+    background: #151515;
+    border-radius: 15px;
+    padding: 1.5rem;
+    border: 1px solid #252525;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    border-color: #64ffda;
+}
+
+.project-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.project-image {
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 1rem;
+    background: #000;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit:fill;
+}
+
+.project-title {
+    color: #fff;
+    margin-bottom: 0.5rem;
+    font-size: 1.3rem;
+}
+
+.project-description {
+    color: #aaa;
+    flex-grow: 1;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.project-details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.project-tech {
+    color: #64ffda;
+}
+
+.project-links {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+}
+
+.project-links a {
+    color: #64ffda;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: opacity 0.3s ease;
+}
+
+.project-links a:hover {
+    opacity: 0.8;
 }
 
 
+.contact {
+    padding: 5rem 2rem;
+    background: transparent;
+}
 
+.contact-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.contact-form {
+    position: relative;
+    padding: 2rem;
+    background: #151515;
+    border-radius: 15px;
+    border: 1px solid #252525;
+}
+
+.form-group {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
+.form-group label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #666;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    background: #202020;
+    border: 1px solid #333;
+    border-radius: 8px;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    transition: all 0.3s ease;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 150px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group input:valid,
+.form-group textarea:valid {
+    border-color: #64ffda;
+    outline: none;
+}
+
+.form-group input:focus ~ label,
+.form-group textarea:focus ~ label,
+.form-group input:valid ~ label,
+.form-group textarea:valid ~ label {
+    top: -10px;
+    left: 0.8rem;
+    font-size: 0.8rem;
+    color: #64ffda;
+    background: #151515;
+    padding: 0 0.3rem;
+}
+
+.submit-btn {
+    background: #64ffda;
+    color: #151515;
+    border: none;
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    transition: transform 0.3s ease;
+}
+
+.submit-btn:hover {
+    transform: translateY(-3px);
+}
+
+.send-icon {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+}
+
+.status {
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #64ffda;
+    font-size: 0.9rem;
+    height: 20px;
+}

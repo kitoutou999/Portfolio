@@ -6,6 +6,11 @@
     <title>Portfolio</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Ajoutez dans le <head> -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
+
     <script src="script.js" defer></script>
 </head>
 <body>
@@ -54,18 +59,83 @@
         
     </section>
 
-    <section class="second">
-       <p>test</p>
-       <p>10</p>
-       <p>123</p>
-       <p>&éç"_'è198372</p>
-       <p>SOEIJF</p>
-       <p>IHU</p>
-       <p>IHU</p>
-       <p>IHU</p>
-       <p>HIU</p>
-       <p>IHU</p>
-       <p>IHU</p>
+    <section class="skills" id="skills">
+        <div class="skills-container">
+            <h2 class="section-title">Technical Skills</h2>
+            <div class="skills-grid">
+
+                <div class="skill-card">
+                    <i class="fa-brands fa-php"></i>
+                    <h3>PHP</h3>
+                    <p>Database manipulation, DOM handling, REST API</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-python"></i>
+                    <h3>Python</h3>
+                    <p>Algorithms, Scripting, Automation, AI</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-java"></i>
+                    <h3>Java</h3>
+                    <p>OOP, Data Structures, Design Patterns, Desktop Applications</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>SQL</h3>
+                    <p>Complex Queries, Optimization, Modeling, Security</p>
+                </div>
+            </div>
+        </div>
     </section>
+
+    <section class="projects" id="projects">
+        <div class="projects-container">
+            <h2 class="section-title">Previous Projects</h2>
+            <div class="projects-grid"></div>
+        </div>
+    </section>
+
+
+    <section class="contact" id="contact">
+        <div class="contact-container">
+            <h2 class="section-title">Contact Me</h2>
+            
+            <form class="contact-form" action="https://formspree.io/f/xgvozlyw" method="POST">
+                <div class="form-group">
+                    <input type="text" name="name" id="name" required>
+                    <label for="name">Full Name</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="email" name="email" id="email" required>
+                    <label for="email">Email Address</label>
+                </div>
+                
+                <div class="form-group">
+                    <input type="text" name="subject" id="subject" required>
+                    <label for="subject">Subject</label>
+                </div>
+                
+                <div class="form-group">
+                    <textarea name="message" id="message" rows="6" required></textarea>
+                    <label for="message">Your Message</label>
+                </div>
+    
+                <div class="form-actions">
+                    <div class="g-recaptcha" data-sitekey="6LfXcdAqAAAAANLfo4oufd9I58xyyuqVkSUhwWR4"></div>
+                    <button type="submit" class="submit-btn">
+                        Send Message
+                        <svg class="send-icon" viewBox="0 0 24 24">
+                            <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/>
+                        </svg>
+                    </button>
+                </div>
+    
+                <div class="status"></div>
+            </form>
+        </div>
+    </section>
+      
+
 </body>
 </html>
