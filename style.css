@@ -159,6 +159,24 @@ nav {
     .nav-links {
         display: none;
     }
+
+    /* Cacher ThreeJS sur mobile */
+    .threejs {
+        display: none;
+    }
+
+    /* Ajuster le hero pour compenser l'absence de ThreeJS */
+    .hero {
+        flex-direction: column;
+        padding: 100px 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin: 0 auto;
+    }
 }
 
 
@@ -266,11 +284,14 @@ nav {
     margin: 0.5rem auto;
 }
 
+/* Modification de la grille des skills */
 .skills-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
     padding: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .skill-card {
@@ -305,7 +326,6 @@ nav {
     line-height: 1.5;
 }
   
-
 
 
 
@@ -501,3 +521,337 @@ nav {
     font-size: 0.9rem;
     height: 20px;
 }
+
+/* Ajoutez ces styles pour le reCAPTCHA */
+.g-recaptcha {
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+@media (max-width: 768px) {
+    .g-recaptcha {
+        transform: scale(0.9);
+        transform-origin: center;
+        margin: 1rem 0;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    /* Navigation */
+    nav {
+        padding: 15px 20px;
+    }
+
+    /* Hero Section */
+    .hero {
+        flex-direction: column;
+        padding: 100px 5%;
+        text-align: center;
+        justify-content: center;
+    }
+
+    .hero-text {
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .name {
+        font-size: 40px;
+    }
+
+    .tagline {
+        font-size: 30px;
+    }
+
+    .description {
+        font-size: 16px;
+    }
+
+    /* ThreeJS Container */
+    .threejs {
+        display: none;
+    }
+
+    /* Skills Section */
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0.5rem;
+    }
+
+    .skill-card {
+        padding: 1.5rem;
+    }
+
+    /* Projects Section */
+    .projects-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .project-card {
+        padding: 1rem;
+    }
+
+    /* Contact Form */
+    .contact-form {
+        padding: 1.5rem;
+    }
+
+    .form-group input,
+    .form-group textarea {
+        padding: 0.8rem;
+    }
+
+    .submit-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    /* Hide cursor on mobile */
+    .cursor {
+        display: none;
+    }
+
+    /* Adjust section titles */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    .download-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .download-card {
+        width: 100%;
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 480px) {
+    .g-recaptcha {
+        transform: scale(0.8);
+        transform-origin: center;
+        margin: 0.5rem 0;
+    }
+}
+
+/* Pour les très petits écrans */
+@media (max-width: 480px) {
+    .name {
+        font-size: 32px;
+    }
+
+    .tagline {
+        font-size: 24px;
+    }
+
+    .description {
+        font-size: 14px;
+    }
+
+    .cta-button {
+        padding: 12px 24px;
+        font-size: 16px;
+    }
+
+    .skill-card i {
+        font-size: 2.5rem;
+    }
+
+    .skill-card h3 {
+        font-size: 1.2rem;
+    }
+
+    .project-image {
+        height: 150px;
+    }
+}
+
+/* Pour les tablettes */
+@media (min-width: 769px) and (max-width: 1024px) {
+
+    
+    .hero {
+        padding: 0 5%;
+    }
+
+    .skills-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Réduire la taille du ThreeJS sur tablette */
+    .threejs {
+        height: 50vh;
+        width: 100%;
+    }
+}
+
+/* Modification des media queries */
+@media (min-width: 769px) {
+    .skills-container, 
+    .projects-container {
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0 2rem;
+    }
+
+    .skill-card,
+    .project-card {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    .skills-grid,
+    .projects-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+/* Pour les grands écrans */
+@media (min-width: 1025px) {
+    .hero {
+        padding: 0 15%;
+    }
+}
+
+.download-section {
+    padding: 4rem 0;
+}
+
+.download-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.download-grid {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.download-card {
+    background: #151515;
+    padding: 2rem;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    border: 1px solid #252525;
+    text-decoration: none;
+    color: #fff;
+    width: 250px;
+}
+
+.download-card:hover {
+    transform: translateY(-5px);
+    border-color: #64ffda;
+}
+
+.download-card i {
+    font-size: 3rem;
+    color: #64ffda;
+    margin-bottom: 1rem;
+}
+
+.download-card h3 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 0.8rem 1.5rem;
+    background: #64ffda;
+    color: #0a0a0a;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.download-btn i {
+    font-size: 1rem;
+    color: #0a0a0a;
+    margin-right: 0.5rem;
+}
+
+.download-card:hover .download-btn {
+    background: #fff;
+}
+
+/* Burger Menu Styles */
+.burger-menu {
+    display: none;
+    cursor: pointer;
+    z-index: 1001;
+}
+
+.burger-line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+
+@media (max-width: 768px) {
+    .burger-menu {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        right: -100%;
+        top: 0;
+        height: 100vh;
+        width: 100%;
+        background: rgba(10, 10, 10, 0.95);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: 0.5s ease;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        margin: 1.5rem 0;
+        font-size: 1.5rem;
+    }
+
+    /* Animation du burger */
+    .burger-menu.active .burger-line:nth-child(1) {
+        transform: rotate(45deg) translate(5px, 5px);
+    }
+
+    .burger-menu.active .burger-line:nth-child(2) {
+        opacity: 0;
+    }
+
+    .burger-menu.active .burger-line:nth-child(3) {
+        transform: rotate(-45deg) translate(7px, -6px);
+    }
+}
+
+

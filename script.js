@@ -121,3 +121,22 @@ if (contactForm) {
         }, 60000); 
     });
 }
+
+// Ajoutez ce code à la fin de votre fichier script.js
+
+const burgerMenu = document.querySelector('.burger-menu');
+const navLinks = document.querySelector('.nav-links');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('active');
+    navLinks.classList.toggle('active');
+});
+
+// Fermer le menu quand on clique sur un lien
+document.querySelectorAll('.nav-links a').forEach(link => {
+    link.addEventListener('click', () => {
+        burgerMenu.classList.remove('active');
+        navLinks.classList.remove('active');
+    });
+});
+
